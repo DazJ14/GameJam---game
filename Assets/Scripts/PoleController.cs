@@ -252,6 +252,25 @@ public class PoleController : MonoBehaviour
         return offset.normalized * length;
     }
 
+
+    public void ResetAfterRespawn()
+    {
+        // Cancel any active grip and restore gravity.
+        if (poleGrip != null)
+            poleGrip.CancelGrip();
+
+        // Reset the logical tip position.
+        if (tipCollision != null && playerBody != null)
+            tipCollision.Initialize(playerBody.position);
+
+        // Reinitialize the pole on the next physics step.
+        initialized = false;
+
+        // Prevent old mouse movement from carrying over.
+        previousMouseScreen = mouseScreen;
+    }
+
+
     private void LateUpdate()
     {
         if (!initialized ||
