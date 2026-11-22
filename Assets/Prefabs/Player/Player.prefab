@@ -84,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: c0dc12eeaaf472043b68e8e29010f7a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -185,13 +185,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3025763027296923615}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: 0, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1841849342515800376}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9152852266973743948
 SpriteRenderer:
   serializedVersion: 3
@@ -239,7 +239,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 2a08d3b7e339e0c4c807f89602c2a17e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -279,7 +279,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3734569767259815450}
@@ -331,14 +331,14 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 2b9f4780e9ef6114f8d68721ab9b8b14, type: 3}
+  m_Sprite: {fileID: -6375073729544840409, guid: 2b9f4780e9ef6114f8d68721ab9b8b14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1.4285715, y: 1.4285715}
+  m_Size: {x: 0.1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -402,7 +402,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.14285715, y: 0.14285715, z: 1}
+  m_LocalScale: {x: 0.7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3734569767259815450}
@@ -454,14 +454,14 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 2b9f4780e9ef6114f8d68721ab9b8b14, type: 3}
+  m_Sprite: {fileID: -6375073729544840409, guid: 2b9f4780e9ef6114f8d68721ab9b8b14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1.5, y: 5}
+  m_Size: {x: 0.1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -477,6 +477,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1841849342515800376}
   - component: {fileID: 1047539305231099713}
+  - component: {fileID: 5074115732629748183}
+  - component: {fileID: 9210605889703807680}
+  - component: {fileID: 4375870944014167352}
   m_Layer: 3
   m_Name: StickPivot
   m_TagString: Untagged
@@ -514,29 +517,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoleController
   playerBody: {fileID: 2875693209590232757}
-  stick: {fileID: 8258318276147799178}
-  stickTip: {fileID: 8002068211309931298}
+  tipCollision: {fileID: 5074115732629748183}
+  poleGrip: {fileID: 9210605889703807680}
+  poleVisual: {fileID: 4375870944014167352}
   mainCamera: {fileID: 0}
+  minLength: 0.15
+  maxLength: 1.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  minLength: 0.15
-  maxLength: 1.5
-  tipRadius: 0.12
-  contactSkin: 0.02
-  minPushSpeed: 1.5
-  maxMouseStep: 0.24
-  pushStrength: 5
-  lateralGrip: 0.6
-  maxImpulsePerStep: 0.25
-  gripSensitivity: 1
-  maxGripSpeed: 9
-  minGripLength: 0.3
-  releaseMomentum: 0.8
-  maxReleaseSpeed: 7
   groundBraking: 4
   maxHorizontalSpeed: 8
   maxRiseSpeed: 9
   maxFallSpeed: 12
+--- !u!114 &5074115732629748183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903435247123612426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25be81b4d263fe346bdda49696f82573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoleTipCollision
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  tipRadius: 0.12
+  contactSkin: 0.015
+--- !u!114 &9210605889703807680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903435247123612426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d628cf3969a240145b47af77da6673a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoleGrip
+  playerBody: {fileID: 2875693209590232757}
+  gripSensitivity: 1
+  maxMouseStep: 0.24
+  maxGripSpeed: 9
+  minGripLength: 0.3
+  maxGripLength: 1.5
+  releaseMomentum: 0.8
+  maxReleaseSpeed: 7
   velocitySmoothing: 0.5
   minLaunchSpeed: 0.6
+--- !u!114 &4375870944014167352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903435247123612426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea11212e0af43140bb5e1efa9370613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoleVisual
+  bodyRoot: {fileID: 3734569767259815450}
+  stick: {fileID: 8258318276147799178}
+  stickTip: {fileID: 8002068211309931298}
+  legRotationOffset: 90
+  armBack: {fileID: 997294133521224147}
+  armFront: {fileID: 5750301938879932275}
+  backArmOrigin: {x: -0.12, y: -0.05}
+  frontArmOrigin: {x: 0.12, y: -0.05}
+  gripDistanceFromTip: 0.55
+  minHandX: -0.1
+  handSeparation: 0.035
+  armWidth: 0.15
+  minArmLength: 0.07
