@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class PoleTipCollision : MonoBehaviour
 {
+  
     [Header("Collision Settings")]
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float tipRadius = 0.12f;
     [SerializeField] private float contactSkin = 0.015f;
+    [SerializeField] private AudioClip maderaSoundClip;
 
     public Vector2 TipWorld { get; private set; }
     public bool IsTouchingGround { get; private set; }
@@ -86,7 +88,10 @@ public class PoleTipCollision : MonoBehaviour
                     slideHit.normal * contactSkin;
             }
         }
+        //Reproducir un sonido al tocar el suelo
+        SoundFXManager.instance.PlaySoundFXClip(maderaSoundClip, transform, 1f);
 
+        //Tocar el suelo
         IsTouchingGround = true;
         return true;
     }

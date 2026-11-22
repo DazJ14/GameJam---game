@@ -1,2 +1,12 @@
 fileFormatVersion: 2
 guid: 25be81b4d263fe346bdda49696f82573
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - maderaSoundClip: {fileID: 8300000, guid: b03eafe4c821eee47be3d2c4e9e5c148, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
