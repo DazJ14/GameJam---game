@@ -258,6 +258,51 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &318809749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 318809751}
+  - component: {fileID: 318809750}
+  m_Layer: 0
+  m_Name: SoundFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &318809750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318809749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f52f26a080f38c4cb714add2712fe49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundFXManager
+  soundFXObject: {fileID: 3328608706425105950, guid: e5719549dc11de74497d1f7a9a2f8f4d, type: 3}
+--- !u!4 &318809751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318809749}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.17798, y: 1.78222, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319652377
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,6 +874,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5074115732629748183, guid: bdd6574b4df1a314e8bd5b4c996cb1e3, type: 3}
+      propertyPath: maderaSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b03eafe4c821eee47be3d2c4e9e5c148, type: 3}
     - target: {fileID: 5750301938879932275, guid: bdd6574b4df1a314e8bd5b4c996cb1e3, type: 3}
       propertyPath: m_SortingOrder
       value: 50
@@ -988,3 +1037,4 @@ SceneRoots:
   - {fileID: 1938764034}
   - {fileID: 479977827}
   - {fileID: 1750067555}
+  - {fileID: 318809751}
